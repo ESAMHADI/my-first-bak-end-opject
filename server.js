@@ -22,11 +22,11 @@ const image = require('./controllers/image')
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'localhost',
-        user: 'postgres',
+        host: process.env.database_host || 'localhost',
+        user: process.env.database_username || 'postgres',
         port: 5432,
-        password: 'gelisim',
-        database: 'smart-brain'
+        password: process.env.database_password || 'gelisim',
+        database: process.env.database_name || 'smart-brain'
     }
 });
 
