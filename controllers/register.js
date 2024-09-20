@@ -30,7 +30,9 @@ const handleRegister = (req,res,db,bcrypt) => {
         //     console.log(hash);
         // })
 
-        .catch(err => res.status(400).json('unable to register'))
+        .catch(err => {
+            console.log({err})
+            res.status(400).json('unable to register')})
     //     database.users.push({
     //         id: '125',
     //         name: name,
