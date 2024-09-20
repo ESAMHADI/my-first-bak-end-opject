@@ -23,11 +23,11 @@ const db = knex({
     client: 'pg',
     connection: {
         
-        host: process.env.database_host || 'localhost',
-        user: process.env.database_username || 'postgres',
+        host: process.env.Database_host || 'localhost',
+        user: process.env.Database_username || 'postgres',
         port: 5432,
-        password: process.env.database_password || 'gelisim',
-        database: process.env.database_name || 'smart-brain'
+        password: process.env.Database_passowrd || 'gelisim',
+        database: process.env.Database_database || 'smart-brain'
     }
 });
 
